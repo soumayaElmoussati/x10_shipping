@@ -4,6 +4,18 @@ import { ThemeProvider } from "./context/ThemeContext";
 import AdminLayout from "./layouts/AdminLayout";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Customers from "./pages/customers/Customers";
+import ShipmentRequests from "./pages/shipments/ShipmentRequests";
+import Carriers from "./pages/carriers/Carriers";
+import AllShipments from "./pages/shipments/AllShipments";
+import DispatchManagement from "./pages/dispatch/DispatchManagement";
+import PickupMonitoring from "./pages/pickup/PickupMonitoring";
+import TrackingMonitoring from "./pages/track/TrackingMonitoring";
+import SupportTickets from "./pages/tickets/SupportTickets";
+import CarrierPayments from "./pages/payment/CarrierPayments";
+import ReportsAnalytics from "./pages/reportsAnalytics/ReportsAnalytics";
+
+
 
 function ProtectedRoute({ children }) {
   const isAuthenticated = localStorage.getItem("x10_admin");
@@ -36,20 +48,27 @@ export default function App() {
         >
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/requests" element={<ShipmentRequests />} />
+          <Route path="carriers" element={<Carriers />} />
+          <Route path="/shipments" element={<AllShipments />} />
+          <Route path="/dispatch" element={<DispatchManagement />} />
+          <Route path="/pickups" element={<PickupMonitoring />} />
+          <Route path="/tracking" element={<TrackingMonitoring />} />
+          <Route path="/support" element={<SupportTickets />} />
+          <Route path="/payments" element={<CarrierPayments />} />
+          <Route path="/reports" element={<ReportsAnalytics />} />
 
           {[
             ["requests", "Shipment Requests"],
             ["shipments", "All Shipments"],
             ["dispatch", "Dispatch Management"],
             ["pickups", "Pickup Management"],
-            ["warehouse", "Warehouse"],
             ["customers", "Customers"],
             ["carriers", "Carriers"],
             ["tracking", "Tracking"],
             ["payments", "Payments"],
-            ["invoices", "Invoices"],
             ["reports", "Reports & Analytics"],
-            ["settings", "Settings"],
             ["support", "Support"],
           ].map(([path, title]) => (
             <Route

@@ -10,14 +10,11 @@ const pageTitles = {
   "/shipments": "All Shipments",
   "/dispatch": "Dispatch Management",
   "/pickups": "Pickup Management",
-  "/warehouse": "Warehouse",
   "/customers": "Customers",
   "/carriers": "Carriers",
   "/tracking": "Tracking",
   "/payments": "Payments",
-  "/invoices": "Invoices",
   "/reports": "Reports & Analytics",
-  "/settings": "Settings",
   "/support": "Support",
 };
 

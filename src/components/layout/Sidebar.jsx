@@ -22,7 +22,6 @@ const menuGroups = [
       { label: "All Shipments", icon: Package, path: "/shipments" },
       { label: "Dispatch Management", icon: Truck, path: "/dispatch" },
       { label: "Pickup Management", icon: MapPin, path: "/pickups" },
-      { label: "Warehouse", icon: Warehouse, path: "/warehouse" },
     ],
   },
   {
@@ -37,14 +36,12 @@ const menuGroups = [
     title: "FINANCE",
     items: [
       { label: "Payments", icon: CreditCard, path: "/payments" },
-      { label: "Invoices", icon: Receipt, path: "/invoices" },
       { label: "Reports & Analytics", icon: BarChart3, path: "/reports" },
     ],
   },
   {
     title: "SYSTEM",
     items: [
-      { label: "Settings", icon: Settings, path: "/settings" },
       { label: "Support", icon: Headphones, path: "/support" },
     ],
   },
@@ -118,16 +115,6 @@ export default function Sidebar({
         </nav>
 
         <div className="sidebar-bottom">
-          {!collapsed && (
-            <div className="sidebar-support">
-              <div className="support-icon">
-                <Headphones size={20} />
-              </div>
-              <strong>Need assistance?</strong>
-              <p>Our operations team is here to help.</p>
-              <button>Contact support</button>
-            </div>
-          )}
 
           <button
             className="collapse-btn"
